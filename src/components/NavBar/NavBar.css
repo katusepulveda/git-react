@@ -1,0 +1,26 @@
+.nav{
+    list-style-type: none;
+    margin:0;
+    display: flex;
+    align-content: flex-start;
+    background-color: #F7F0DE;
+}
+
+.nav h1{
+    font-size: 1.2em;
+    text-align: left;
+    padding-right: 300px;
+}
+
+
+.nav li{
+    padding: 15px;
+    align-self: center;
+}
+.nav a{
+    text-decoration: none;
+    color:black;
+}
+.nav a:hover{
+    color:blueviolet;
+}
