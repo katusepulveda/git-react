@@ -25,10 +25,6 @@ function ItemDetailContainer() {
             .then(res => {
                 setItem(res);
             })
-            .catch(err => {
-                console.log(err);
-                alert('ocurrio un error');
-            });
     }, []);
 
     return (
