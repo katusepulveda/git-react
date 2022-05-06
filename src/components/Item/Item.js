@@ -3,6 +3,8 @@ import './Item.css'
 
 const Item = ({ name, img , precio}) => {
     return (
+        
+        <div className="contenedor">
         <div className="card">
             <picture>
                 <img src={img} alt={name} width="200px"/>
@@ -11,7 +13,7 @@ const Item = ({ name, img , precio}) => {
             <p>${precio}</p>
             <button>Ver detalle</button>
         </div>
-
+        </div>
     )
 }
 export default Item

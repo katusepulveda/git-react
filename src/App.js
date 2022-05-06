@@ -3,16 +3,22 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Button from './components/button';
 import ItemListContainer from './components/ItemListContainer';
-import axios from 'axios';
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer'
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer saludo='Este es el saludo de ItemListContainer :)' />
-      <Button/>
-      <ItemDetailContainer/>
+      <Routes>
+        <Route path='/' element={<ItemListContainer />} />
+        <Route path='/category/:categoryId' element={<ItemListContainer />} />
+        <Route path='/item/:id' element={<ItemDetailContainer />} />
+
+
+      </Routes>
+
+      <Button />
 
     </div>
   );

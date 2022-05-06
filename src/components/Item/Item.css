@@ -1,6 +1,10 @@
+.contenedor{
+    display: inline;
+}
 .card{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 330px;
     height: 430px;
     
