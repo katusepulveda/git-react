@@ -12,8 +12,8 @@ function NavBar(props) {
                 <h1>Alquimia Nativa</h1>
                 <Link to='/' className='nav-links'> HOME </Link>
 
-                <Link to='/categorias' className='nav-links'> CATEGORIAS </Link>
-                
+                <Link to='/category/tablet' className='nav-links'> TABLET </Link>
+                <Link to='/category/celulares' className='nav-links'> CELULARES </Link>
 
                 <Link to='/contacto' className='nav-links'> CONTACTO </Link>
 
