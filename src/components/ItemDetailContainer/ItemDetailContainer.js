@@ -52,7 +52,7 @@ function ItemDetailContainer() {
             .then(res => {
                 setItem(res);
             })
-    }, []);
+    }, [id]);
 
     return (
         <div>
