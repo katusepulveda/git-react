@@ -9,14 +9,16 @@ import Contacto from './pages/Contacto';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Categorias from './pages/categorias';
 import Cart from './pages/Cart';
+import {CartContextProvider} from './store/cart-context'
 
 function App() {
   return (
     <div className="App">
-      
+      <CartContextProvider>
       <NavBar />
       <Routes>
         <Route path='/' element={<ItemListContainer />} />
+        <Route path='/home' element={<ItemListContainer />} />
         <Route path='/category/:categoryId' element={<ItemListContainer />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
         <Route path='/contacto' element={<Contacto/>} />
@@ -28,7 +30,7 @@ function App() {
       </Routes>
 
       <Button />
-
+      </CartContextProvider>
     </div>
   );
 }

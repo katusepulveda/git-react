@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState(initial);
-    console.log(count)
 
     const Increase = () => {
         const newValue = count + 1

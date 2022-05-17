@@ -39,7 +39,7 @@ function getItem(id) {
 
         setTimeout(() => {
             resolve(producto[0]);
-        }, 2000);
+        }, 1000);
     });
     
     return promesa;
@@ -47,12 +47,12 @@ function getItem(id) {
 }
 
 
-function ItemDetailContainer() {
+function ItemDetailContainer( {setCart, cart }) {
     const [item, setItem] = useState({});
     const { id } = useParams();
 
     useEffect(() => {
-        console.log(id);
+        console.log("se seleccionó ver detalle del item: " + id);
         getItem(id)
             .then(res => {
                 setItem(res);
@@ -61,7 +61,7 @@ function ItemDetailContainer() {
 
     return (
         <div>
-            <ItemDetail item={item} />
+            <ItemDetail item={item} setCart={setCart} cart={cart}/>
         </div>
     )
 }
