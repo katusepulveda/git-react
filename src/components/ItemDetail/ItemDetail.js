@@ -5,13 +5,14 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({item}) => {
     const [cantidadDeProductos, setCantidadDeProductos] = useState(null);
-     const { addToCart } = useCartContext()
+    const { addToCart } = useCartContext()
 
     const addHandler = ( quantityToAdd) => {
-        setCantidadDeProductos(quantityToAdd);
-       addToCart(item, quantityToAdd) 
+    setCantidadDeProductos(quantityToAdd);
+    addToCart(item, quantityToAdd) 
 
     };
+
 
 
     return(
