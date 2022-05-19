@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from 'react';
 
 const CartContext = createContext({
   products: [],
+  cartList: [],
   addToCart: () => {},
   removeProduct: () => {},
   isInCart: () => {},
@@ -11,13 +12,12 @@ const CartContext = createContext({
 
 export const useCartContext = () => useContext(CartContext);
 
-export const CartContextProvider = ({children}) => {
+const CartContextProvider = ({children}) => {
 const [cartList, setCartList] = useState([]);
 
 const IsInCart = (id) => {
     return cartList.some(item => item.id === id)
 }
-
 
 const addToCart = (item, quantity) => {
     if (IsInCart(item.id)) {
