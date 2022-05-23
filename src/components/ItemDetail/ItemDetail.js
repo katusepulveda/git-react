@@ -7,7 +7,7 @@ const ItemDetail = ({item}) => {
     const [cantidadDeProductos, setCantidadDeProductos] = useState(null);
     const { addToCart } = useCartContext()
 
-    const addHandler = ( quantityToAdd) => {
+    const addHandler = (quantityToAdd) => {
     setCantidadDeProductos(quantityToAdd);
     addToCart(item, quantityToAdd) 
 

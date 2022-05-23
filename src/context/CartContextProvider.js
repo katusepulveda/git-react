@@ -19,7 +19,7 @@ const isInCart = (id) => {
 }
 
 const addToCart = (item) => {
-  if(!isInCart(addToCart.id)) {
+  if(!isInCart(item.id)) {
     setCartList([...cartList, item])
 } else {
     const newProducts = cartList.map(prod => {
