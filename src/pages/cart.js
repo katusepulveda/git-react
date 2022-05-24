@@ -16,7 +16,6 @@ const Cart = () => {
                 <div>
                     <button onClick={() => { emptyCart () }}>Limpiar carrito</button>
                     <Link to={'/form'}><button>Realizar compra</button></Link>
-
                 </div>
             </div>
         </div>

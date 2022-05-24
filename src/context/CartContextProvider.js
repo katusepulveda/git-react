@@ -11,23 +11,25 @@ const CartContextProvider = ({ children }) => {
     return cartList.some(item => item.id === id)
   }
 
-  const addToCart = (item) => {
+  const addToCart = (item, quantity) => {
     if (!isInCart(item.id)) {
-      setCartList([...cartList, item])
+      setCartList([...cartList, item, quantity])
+
     } else {
       const newProducts = cartList.map(prod => {
         if (prod.id === item.id) {
           const newProduct = {
-            ...prod,
-            quantity: item.quantity
+            ...prod, quantity: prod.quantity + quantity,
           }
           return newProduct
         } else {
           return prod
         }
       })
-      setCartList(newProducts)
+      setCartList(newProducts) 
     }
+   
+
     /*     if (IsInCart(item.id)) {
           return setCartList(
             cartList.map((product) =>
@@ -41,8 +43,8 @@ const CartContextProvider = ({ children }) => {
   };
 
   const getCartQuantity = () => {
-    return cartList.reduce((total, count) => {
-      return total + count.quantity
+    return cartList.reduce((total, item) => {
+      return total + item.quantity
     }, 0)
   }
 

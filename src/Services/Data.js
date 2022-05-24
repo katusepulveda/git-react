@@ -2,9 +2,9 @@
 const products = [
     {
         id: 1,
-        name: 'Tablet',
+        name: 'TABLET YOGA SMART CON GOOGLE ASSISTANT (10.1 64 GB, WIFI)',
         descripcion: "producto 1 descripción",
-        precio: "5000",
+        price: "189.990",
         stock: "5",
         category: 'tablet',
         img:'https://home.ripley.cl/store/Attachment/WOP/D113/2000380259867/2000380259867-2.jpg'
@@ -12,22 +12,31 @@ const products = [
     },
     {
         id: 2,
-        name: "Celular 1",
-        descripcion: "producto 2 descripción",
-        precio: "4000",
+        name: "MOTOROLA G51 128GB AZUL",
+        descripcion: "El Smartphone Moto G51 te dará todo lo que buscas en un teléfono. Entretenimiento sin pausas gracias a su gran batería de 5000mAh, y notable tecnología a la hora de tomar fotografías con su cámara trasera de 50MP + 8MP (Wide & depth) + 2MP (macro) + Flash LED. Con su procesador Qualcomm Snapdragon SM4350-Pro, que se combina con una memoria de 4GB de RAM y un almacenamiento de 128GB, tendrás una gran alternativa para tu conectividad.",
+        price: "239.990",
         stock: "6",
         category: 'celular',
-        img: 'https://ripleycl.imgix.net/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fim-prod-product-versions-images%2Fs10-plus-coral-d949c7f6-992d-43c9-8ed9-fff1ef48d5eb.jpg?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=f8d52e6b3065a43003981306464d8afa'
+        img: 'https://home.ripley.cl/store/Attachment/WOP/D191/2000389148674/2000389148674_2.jpg'
     },
     {
         id: 3,
-        name: "Celular 2",
-        descripcion: "producto 3 descripción",
-        precio: "8000",
+        name: "MOTOROLA MOTO G200 128GB ROM 8GB RAM",
+        descripcion: "El Smartphone Moto G200 te dará todo lo que buscas en un teléfono. Entretenimiento sin pausas gracias a su gran batería de 5000mAh, y notable tecnología a la hora de tomar fotografías con su cámara trasera de 50MP + 8MP (Wide & depth) + 2MP (macro) + Flash LED. Con su procesador Qualcomm Snapdragon SM4350-Pro, que se combina con una memoria de 4GB de RAM y un almacenamiento de 128GB, tendrás una gran alternativa para tu conectividad.",
+        price: "539.990",
         stock: "10",
         category: 'celular',
-        img: 'https://home.ripley.cl/store/Attachment/WOP/D191/2000383201900/2000383201900_2.jpg'
-    }
+        img: 'https://ripleycl.imgix.net/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fim-prod-product-versions-images%2Fv-840023225826-1-0f76200f-b31a-41d9-bf12-4c7c70e36f1e.jpg?w=750&h=555&ch=Width&auto=format&cs=strip&bg=FFFFFF&q=60&trimcolor=FFFFFF&trim=color&fit=fillmax&ixlib=js-1.1.0&s=168a20d7e9999cfac6543b3d374adb1d'
+    },
+    {
+        id: 4,
+        name: "MOTOROLA G51 128GB AZUL",
+        descripcion: "El Smartphone Moto G51 te dará todo lo que buscas en un teléfono. Entretenimiento sin pausas gracias a su gran batería de 5000mAh, y notable tecnología a la hora de tomar fotografías con su cámara trasera de 50MP + 8MP (Wide & depth) + 2MP (macro) + Flash LED. Con su procesador Qualcomm Snapdragon SM4350-Pro, que se combina con una memoria de 4GB de RAM y un almacenamiento de 128GB, tendrás una gran alternativa para tu conectividad.",
+        price: "239.990",
+        stock: "6",
+        category: 'celular',
+        img: 'https://home.ripley.cl/store/Attachment/WOP/D191/2000389148674/2000389148674_2.jpg'
+    },
 ]
 export const getData = () => {
     return new Promise (resolve =>{

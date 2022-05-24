@@ -1,12 +1,14 @@
 .contenedor{
     display: inline;
+    margin: 10px;
 }
 .card{
+    padding-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 330px;
-    height: 430px;
+    height: 300px;
     
 }
 .namestyle{

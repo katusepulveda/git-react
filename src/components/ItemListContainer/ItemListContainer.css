@@ -1,5 +1,7 @@
 .ItemListContainer{
-    display:inline;
-    background-color: rgb(173, 173, 173);
-    height: 500px;
+    
+    display:block;
+    margin-left: 180px;
+    margin-right: auto;
+    height: 80px;
 }
