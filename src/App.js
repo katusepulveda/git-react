@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Button from './components/button';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer'
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
@@ -9,7 +8,7 @@ import Contacto from './pages/Contacto';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Categorias from './pages/categorias';
 import Cart from './pages/Cart';
-import {CartContextProvider} from './store/cart-context'
+import CartContextProvider from './context/CartContextProvider'
 
 function App() {
   return (
@@ -26,10 +25,8 @@ function App() {
         <Route path='/cart' element={<Cart/>} />
         <Route path='/*' element={<h1>ERROR 404 . PAGE NOT FOUND</h1>} />
 
-
       </Routes>
 
-      <Button />
       </CartContextProvider>
     </div>
   );

@@ -7,7 +7,7 @@ const ItemDetail = ({item}) => {
     const [cantidadDeProductos, setCantidadDeProductos] = useState(null);
     const { addToCart } = useCartContext()
 
-    const addHandler = (quantityToAdd) => {
+    const addHandler = ( quantityToAdd) => {
     setCantidadDeProductos(quantityToAdd);
     addToCart(item, quantityToAdd) 
 
@@ -20,7 +20,7 @@ const ItemDetail = ({item}) => {
             <img src={item.img} />
             <div>
                 <p>{item.title}</p>
-                <p>{item.precio}</p>
+                <p>{item.price}</p>
                 <p>{item.descripcion}</p>
                 <div>
                 
