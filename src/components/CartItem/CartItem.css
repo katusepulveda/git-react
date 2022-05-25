@@ -1,0 +1,28 @@
+.CartItem-div{
+    display:flex;
+    margin-top: 30px;
+
+}
+.name-cantidad{
+    display:inline-flex;
+    padding: 10px;
+    text-align: left;
+    margin-right: 50px;
+}
+.img{
+    width: 180px;
+}
+.itemName{
+    margin-left: 80px;
+    margin-right: 70px;
+    font-size: 20px;
+}
+.itemCantidad{
+    margin-right: 70px;
+    font-size: 20px;
+
+}
+.itemPrecio{
+    font-size: 20px;
+
+}

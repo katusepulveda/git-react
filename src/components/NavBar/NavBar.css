@@ -1,24 +1,28 @@
 .nav{
     list-style-type: none;
-    margin:10px;
+    padding-top:10px;
     display: flex;
     align-content: flex-start;
-    background-color: #F7F0DE;
+    background-color: #2F0554;
+    
 }
 .nav h1{
-    font-size: 1.5rem;
-    text-align: left;
-    padding-right: 300px;
+    padding-right: 150px;
+    margin-right: 70px;
 }
 .nav-links{
     padding: 10px;
 }
 .nav a{
+    margin-top: 20px;
+    padding-left: 60px;
     text-decoration: none;
-    color:black;
+    color:#F6F0FB 
 }
 .nav a:hover{
     color:blueviolet;
 }
-
+.img-navbar{
+    width: 100px;
+}
 
