@@ -8,26 +8,22 @@ const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
 
   const isInCart = (id) => {
-    return cartList.some(item => item.id === id)
+    return cartList.some((item) => item.id === id)
   }
 
   const addToCart = (item, quantity) => {
-    if (!isInCart(item.id)) {
-      setCartList([...cartList, item, quantity])
-
-    } else {
-      const newProducts = cartList.map(prod => {
-        if (prod.id === item.id) {
-          const newProduct = {
-            ...prod, quantity: prod.quantity + quantity,
-          }
-          return newProduct
-        } else {
-          return prod
-        }
-      })
-      setCartList(newProducts) 
+    if (isInCart(item.id)) {
+      return setCartList(
+        cartList.map((product) =>
+          product.id === item.id
+            ? { ...product, quantity: product.quantity + quantity }
+            : product
+        )
+      );
     }
+    setCartList([...cartList, { ...item, quantity }]);
+  
+    
    
 
     /*     if (IsInCart(item.id)) {
@@ -56,10 +52,10 @@ const CartContextProvider = ({ children }) => {
     return cartList.reduce((total, item) => total + item.quantity, 0)
   }
 
-  const totalPrice = () => {
-    return cartList.reduce((total, item) => total + item.quantity * item.price, 0)
-  }
-
+ const totalPrice = () => {
+    return cartList.reduce((total, item) => total + item.quantity * item.price , 0)
+  } 
+ 
   const deleteById = (id) => {
     setCartList(cartList.filter((item) => item.id !== id));
   };
