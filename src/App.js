@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer'
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import Contacto from './pages/Contacto';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Categorias from './pages/categorias';

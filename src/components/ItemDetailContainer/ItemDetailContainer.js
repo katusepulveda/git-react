@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from '../ItemDetail/ItemDetail';
+import {collection, doc, getDocs, getFirestore, query, limit, where } from 'firebase/firestore'
 
 function getItem(id) {
     const promesa = new Promise((resolve, reject) => {
@@ -55,10 +56,31 @@ function getItem(id) {
 
 }
 
-
 function ItemDetailContainer({ setCartList, cartList }) {
     const [item, setItem] = useState({});
     const { id } = useParams();
+
+    useEffect(() =>{
+        const db = getFirestore();
+    
+        const ItemCollection = collection( db, 'items');
+
+        const q = query(
+            ItemCollection,
+            where('price', '>', 500),
+            limit(4)
+        );
+    
+        getDocs(q)
+            .then(snapshot => {
+                console.log(snapshot.docs.map(doc => { 
+                    return {...doc.data(), id: doc.id } 
+                }));
+            
+        }) 
+
+    }, []);
+
 
     useEffect(() => {
         console.log("se seleccionó ver detalle del item: " + id);
@@ -67,6 +89,7 @@ function ItemDetailContainer({ setCartList, cartList }) {
                 setItem(res);
             })
     }, [id]);
+
 
     return (
         <div>
@@ -77,4 +100,4 @@ function ItemDetailContainer({ setCartList, cartList }) {
 
 
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

@@ -38,7 +38,7 @@ const products = [
         img: 'https://home.ripley.cl/store/Attachment/WOP/D191/2000384580097/2000384580097_2.jpg'
     },
 ]
-export const getData = () => {
+ const getData= () => {
     return new Promise (resolve =>{
         setTimeout(() => {
             resolve(products)
@@ -46,4 +46,4 @@ export const getData = () => {
     })
     }
 
-
+   export default getData
