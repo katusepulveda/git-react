@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useParams } from 'react'
+import React, { useEffect, useState} from 'react'
+import { useParams } from 'react-router-dom';
 import  './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 import getData from '../../Services/Data'
@@ -7,6 +8,7 @@ import  db  from '../../Services/firebase';
 
 const ItemListContainer = ({saludo}) => {
     const [products, setProducts] = useState([])
+    const {categoryId} = useParams()
 
     const getData = async () =>{
         try {
@@ -19,9 +21,21 @@ const ItemListContainer = ({saludo}) => {
         }
     }
 
+    const getDataCategory = async (id) =>{
+        try {
+            const document = collection(db, 'items')
+            const col = await getDocs(document)
+            const result = col.docs.map((doc) => doc = {id:doc.id, ... doc.data()})
+            const resultFilter = result.filter(e=>e.category===id)
+            setProducts(resultFilter)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     useEffect(()=>{
-        getData()
-    }, []
+        categoryId?getDataCategory(categoryId):getData()
+    }, [categoryId]
     )
 
     return (

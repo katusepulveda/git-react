@@ -16,7 +16,7 @@ function NavBar(props) {
                 <Link to='/' className='nav-links'> HOME </Link>
 
                 <Link to='/category/tablet' className='nav-links'> TABLET </Link>
-                <Link to='/category/celulares' className='nav-links'> CELULARES </Link>
+                <Link to='/category/celular' className='nav-links'> CELULARES </Link>
 
                 <Link to='/contacto' className='nav-links'> CONTACTO </Link>
 
