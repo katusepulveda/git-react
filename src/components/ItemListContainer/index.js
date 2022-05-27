@@ -2,13 +2,14 @@ import React, { useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom';
 import  './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
-import getData from '../../Services/Data'
 import {collection, getDocs } from 'firebase/firestore'
 import  db  from '../../Services/firebase';
 
 const ItemListContainer = ({saludo}) => {
     const [products, setProducts] = useState([])
     const {categoryId} = useParams()
+
+
 
     const getData = async () =>{
         try {
