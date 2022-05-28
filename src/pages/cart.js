@@ -19,7 +19,9 @@ const Cart = () => {
                 <h3>Total: $ {totalPrice()} </h3>
                 <div>
                     <button onClick={() => { emptyCart () }}>Limpiar carrito</button>
-                    <Link to={'/form'}><button>Realizar compra</button></Link>
+
+                    <Link to={'/checkout'}>
+                    <button>Realizar compra</button></Link>
                 </div>
             </div>
         </div>

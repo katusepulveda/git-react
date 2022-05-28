@@ -23,19 +23,6 @@ const CartContextProvider = ({ children }) => {
     }
     setCartList([...cartList, { ...item, quantity }]);
   
-    
-   
-
-    /*     if (IsInCart(item.id)) {
-          return setCartList(
-            cartList.map((product) =>
-              product.id === item.id
-                ? { ...product, quantity: product.quantity + quantity }
-                : product
-            )
-          );
-        }
-        setCartList([...cartList, { ...item, quantity }]); */
   };
 
   const getCartQuantity = () => {

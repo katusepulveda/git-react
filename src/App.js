@@ -6,8 +6,8 @@ import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetai
 import {Route, Routes} from 'react-router-dom';
 import Contacto from './pages/Contacto';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Categorias from './pages/categorias';
 import Cart from './pages/Cart';
+import Checkout from './components/checkout/Checkout';
 import CartContextProvider from './context/CartContextProvider'
 
 function App() {
@@ -21,8 +21,9 @@ function App() {
         <Route path='/category/:categoryId' element={<ItemListContainer />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
         <Route path='/contacto' element={<Contacto/>} />
-        <Route path='/categorias' element={<Categorias/>} />
         <Route path='/cart' element={<Cart/>} />
+        <Route path='/checkout' element={<Checkout/>} />
+
         <Route path='/*' element={<h1>ERROR 404 . PAGE NOT FOUND</h1>} />
 
       </Routes>
