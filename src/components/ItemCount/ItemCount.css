@@ -1,0 +1,41 @@
+.divContador {
+    display: flex;
+    margin-left: 30px;
+}
+
+.contadorBoton {
+    background-color: #EBEBEB;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-style: solid;
+    border-color: #D3D3D3;
+    border-width: thin;
+    font-weight: bold;
+
+}
+
+.count {
+    border-style: solid;
+    border-width: thin;
+    border-color: #D3D3D3;
+    font-size: 20px;
+    margin-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 0px;
+    background-color: #ffffff;
+}
+
+.agregar {
+    margin-left: 40px;
+    min-width: 130px;
+    text-decoration: none;
+    height: 40px;
+    color: #fff;
+    padding: 8px 10px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: #5FC132;
+}

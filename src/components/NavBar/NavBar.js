@@ -1,30 +1,25 @@
 import React from 'react';
 import './NavBar.css';
-import CartWidget from '../CartWidget';
-import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
-function NavBar(props) {
-
+function NavBar() {
     return (
         <>
-        <div>
-            <ul className='nav'>
-                <h1>
-            <img src="https://www.freepnglogos.com/uploads/two-phone-mobile-logo-download-9.png" className="img-navbar" alt="img"></img>
-              </h1> 
-               
-                <Link to='/' className='nav-links'> HOME </Link>
+            <div>
+                <ul className='nav'>
+                    <h1>
+                        <img src="https://www.freepnglogos.com/uploads/two-phone-mobile-logo-download-9.png" className="imgNavbar" alt="logo"></img>
+                    </h1>
 
-                <Link to='/category/tablet' className='nav-links'> TABLET </Link>
-                <Link to='/category/celular' className='nav-links'> CELULARES </Link>
+                    <NavLink to='/' activeClassName='active'> HOME </NavLink>
+                    <NavLink to='/category/tablet' activeClassName='active'> TABLET </NavLink>
+                    <NavLink to='/category/celular' activeClassName='active'> CELULARES </NavLink>
+                    <NavLink to='/contacto' activeClassName='active'> CONTACTO </NavLink>
+                    <CartWidget />
 
-                <Link to='/contacto' className='nav-links'> CONTACTO </Link>
-
-                <CartWidget/>
-            </ul>
-
-            
-        </div>
+                </ul>
+            </div>
         </>
     );
 }

@@ -1,4 +1,93 @@
-.titulo{
-    padding-top: 20px;
-    
+.titulo {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 30px;
+    border-bottom: 5px solid #ACAAAF;
+    border-width: thin;
+    color: #4B4B4B;
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+.divTotal {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    border-top: 5px solid #ACAAAF;
+    border-width: thin;
+    color: #4B4B4B;
+}
+
+.divBotones {
+    margin-top: 40px;
+    border-top: 5px solid #ACAAAF;
+    border-width: thin;
+    color: #4B4B4B;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 25px;
+    display: flex;
+    justify-content: right;
+}
+
+.vaciar {
+    margin-left: 40px;
+    min-width: 130px;
+    text-decoration: none;
+    height: 40px;
+    color: #fff;
+    padding: 8px 10px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: #D83131;
+}
+
+.bin {
+    width: 20px;
+    margin-left: 7px;
+    margin-bottom: 5px;
+}
+
+.comprar {
+    margin-left: 10px;
+    min-width: 130px;
+    text-decoration: none;
+    height: 40px;
+    color: #fff;
+    padding: 8px 10px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: #5FC132;
+}
+
+.continuar {
+    margin-left: 10px;
+    min-width: 130px;
+    text-decoration: none;
+    height: 40px;
+    color: #fff;
+    padding: 8px 10px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: #BBBBBB;
+}
+
+.flechas {
+
+    width: 20px;
+    margin-left: 7px;
+    margin-bottom: 5px;
 }

@@ -1,28 +1,38 @@
-.CartItem-div{
-    display:flex;
+.CartItem-div {
+    display: grid;
+    grid-template-areas: "img itemName itemCantidad itemPrecio botonEliminar";
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    grid-template-rows: 150px;
     margin-top: 30px;
+    align-items: center;
+    text-align: center;
+}
 
-}
-.name-cantidad{
-    display:inline-flex;
-    padding: 10px;
-    text-align: left;
-    margin-right: 50px;
-}
-.img{
+.img {
     width: 180px;
+    grid-area: img;
 }
-.itemName{
-    margin-left: 80px;
-    margin-right: 70px;
-    font-size: 20px;
-}
-.itemCantidad{
-    margin-right: 70px;
-    font-size: 20px;
 
+.itemName {
+    font-size: 16px;
+    grid-area: itemName;
 }
-.itemPrecio{
-    font-size: 20px;
 
+.itemCantidad {
+    font-size: 16px;
+    grid-area: itemCantidad;
+}
+
+.itemPrecio {
+    font-size: 16px;
+    grid-area: itemPrecio;
+}
+
+.botonEliminar {
+    grid-area: botonEliminar;
+    border: none;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    background: none;
+    width: 70%;
 }

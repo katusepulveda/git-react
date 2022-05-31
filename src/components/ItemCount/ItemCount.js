@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ItemCount.css'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState(initial);
@@ -15,19 +16,16 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         if (newValue >= initial) {
             setCount(newValue)
         }
-
     }
 
     return (
         <>
             <div>
-                <div>
-                    <button onClick={Decrease}> - </button>
-                    <h3> {count} </h3>
-                    <button onClick={Increase}> + </button>
-                </div>
-                <div>
-                <button onClick={() => (count <= stock ) && onAdd(count)}>Agregar al carrito</button>
+                <div className="divContador">
+                    <button onClick={Decrease} className="contadorBoton"> - </button>
+                    <button className="count"> {count} </button>
+                    <button onClick={Increase} className="contadorBoton"> + </button>
+                    <button onClick={() => (count <= stock) && onAdd(count)} className="agregar">Agregar al carrito</button>
                 </div>
             </div>
         </>

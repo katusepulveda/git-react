@@ -1,25 +1,20 @@
-import React from "react";
-import { useCartContext } from "../../context/CartContextProvider";
+import React, { useContext } from 'react'
+import { CartContext } from '../../context/CartContextProvider'
 import './CartItem.css'
+import eliminaricono from './img/eliminaricono.png'
 
 const CartItem = ({ name, quantity, price, img, id }) => {
-    const { emptyCart, removeOneUnit } = useCartContext();
+    const { removeOneUnit } = useContext(CartContext)
 
     return (
         <div className="CartItem-div">
             <img src={img} alt={name} className="img"></img>
-            <div className="name-cantidad">
-                <p className="itemName" >{name}</p>
-                <p className="itemCantidad">Cantidad: {quantity} </p>
-                <p className="itemPrecio">Precio: {price} </p>
-            </div>
-
-
-            <div>
-            {/* <button onClick={() => removeOneUnit(id)}>Eliminar 1</button>
-            <button onClick={() => emptyCart(id)}>Eliminar todos</button>
- */}
-            </div>
+            <p className="itemName" >{name}</p>
+            <p className="itemCantidad">Cantidad: {quantity} </p>
+            <p className="itemPrecio">Precio: {price} </p>
+            <button onClick={() => removeOneUnit(id)} className="botonEliminar">
+                <img src={eliminaricono}></img>
+            </button>
         </div>
     );
 };
