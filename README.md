@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Ecommerce para el curso de React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta web es un sitio para una tienda de celulares y tablets. Proyecto creado para el curso de React de CoderHouse.
 
-## Available Scripts
+## Dependencias utilizadas:
 
-In the project directory, you can run:
+react-router-dom: Routing en el browser
 
-### `npm start`
+react-firebase: Base de datos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Rutas:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El proyecto tiene establecidas sus rutas en App.js, que son:
 
-### `npm test`
+'/' ItemListContainer -  Home del sitio web
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+'/home' ItemListContainer - Home del sitio web
 
-### `npm run build`
+'/category/:categoryId' - Dirige a cada una de las categorias del sitio: tablet, celulares
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+'/item/:id' ItemDetailContainer - Dirige al detalle de cada item, aquí podemos ver descripción, precio y otros.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+'/contacto' - Información de contacto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+'/cart' Cart - Dirige al carrito de compras
 
-### `npm run eject`
+'/checkout' Checkout - Dirige al checkout, el proceso para realizar la compra y finalizarla.
+ 
+## Componentes:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+• CartItem: Componente que muestra el item que está dentro del carrito
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+• CartWidget: Carrito de compras y su funcionalidad que muestra la cantidad de items agregados.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+• checkout: checkout de la página y la funcionalidad que permite ingresar los datos del cliente para finalizar la compra.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+• Item: muestra la información que se presenta en ItemDetail y la opción de ver más detalles (redirige al itemDetail)
 
-## Learn More
+• ItemCount: Componente que permite determinar la cantidad de un item que se agregará al carrito.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+• ItemDetail: Componente que muestra el detalle de un item, su información y la posibilidad de agregar items e ir al carrito de compras.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+• ItemDetailContainer: Contenedor del ItemDetail que determina la información a mostrar segun el id del item seleccionado.
 
-### Code Splitting
+• ItemList: Contiene el map de los productos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+• ItemListContainer: Contenedor de los productos que se cargan en el ItemList y sus categorías.
 
-### Analyzing the Bundle Size
+• NavBar: Componente que contiene el menu de navegación del sitio, contiene los links a las categorías, home, acceso a la información de contacto y al carrito de compras.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contexto: CartContextProvider
 
-### Making a Progressive Web App
+Contiene las funciones que permiten realizar acciones con los productos: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+• isInCart : Items dentro del carro
 
-### Advanced Configuration
+• AddToCart : Agrega la cantidad seleccionada de items al carro
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+• emptyCart: Permite borrar todos los items del carro
 
-### Deployment
+• totalCount: Indica la cantidad del carrito
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+• totalPrice: Permite saber el precio total a pagar
 
-### `npm run build` fails to minify
+• deleteById: Permite borrar el item del carrito (cartList) a partir del id
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+• removeOneUnit: Remueve 1 unidad del producto del carrito de compras
+
+## Base de datos de Firebase
+
+• Items: category (tablet, celulares), descripcion, img, name, price, stock
+
+• Order: Orden de compra al finalizar el proceso de registro del cliente y compra de productos que genera un codigo de compras automaticamente.
+
+## autora:
+
+⁎ Katerina Sepúlveda
+
+
+
