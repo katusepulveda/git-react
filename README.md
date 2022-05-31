@@ -72,11 +72,12 @@ Contiene las funciones que permiten realizar acciones con los productos:
 
 • Order: Orden de compra al finalizar el proceso de registro del cliente y compra de productos que genera un codigo de compras automaticamente.
 
-## autora:
+## Autora:
 
 ⁎ Katerina Sepúlveda
 
+## Muestra del funcionamiento de la página ecommerce: 
 
-### 
+### https://github.com/katusepulveda/git-react/blob/main/public/proyectoMuestra.gif
 
-(https://github.com/katusepulveda/git-react/blob/main/public/proyectoMuestra.gif)
+![proyectoMuestra](https://user-images.githubusercontent.com/94873529/171285537-7ccc1003-f288-4c0c-9228-3c191db21564.gif)
